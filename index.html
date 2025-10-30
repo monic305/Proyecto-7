@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario accesible </title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <div class="contenido">
+            <section class="seccion-formulario">
+
+                <form>
+                    <div class="grupo-formulario">
+                        <label for="nombre-completo" class="etiqueta">Nombre Completo</label>
+                        <input type="text" id="nombre-completo" name="nombre-completo" class="campo-entrada"
+                            aria-describedby="descripcion-nombre" placeholder="¿Cómo deberíamos llamarte?">
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="correo" class="etiqueta">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" class="campo-entrada"
+                            aria-describedby="error-correo" aria-invalid="true">
+                        <p class="mensaje-error" role="alert">El correo electrónico ya está en uso</p>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="contrasena" class="etiqueta">Contraseña</label>
+                        <div class="contenedor-password">
+                            <input type="password" id="contrasena" name="contrasena" class="campo-entrada"
+                                aria-describedby="descripcion-contrasena" placeholder="Introduce tu contraseña">
+                            <button type="button" class="boton-alternar-password" aria-label="Mostrar contraseña"
+                                aria-pressed="false">
+                                Mostrar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="confirmar-contrasena" class="etiqueta">Confirmar Contraseña</label>
+                        <div class="contenedor-password">
+                            <input type="password" id="confirmar-contrasena" name="confirmar-contrasena"
+                                class="campo-entrada">
+                            <button type="button" class="boton-alternar-password"
+                                aria-label="Mostrar confirmación de contraseña" aria-pressed="false">
+                                Mostrar
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="boton-enviar">Actualizar Perfil</button>
+                </form>
+            </section>
+
+            <section class="seccion-progreso" aria-labelledby="titulo-progreso">
+                <h2 id="titulo-progreso">Completitud del Perfil</h2>
+
+                <div class="contenedor-progreso">
+                    <div class="barra-progreso" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                        aria-valuemax="100">
+                        <div class="relleno-progreso"></div>
+                    </div>
+                    <p class="texto-progreso">60% completado</p>
+                </div>
+
+                <ul class="lista-requisitos" aria-label="Requisitos para completar el perfil">
+                    <li>
+                        <input type="checkbox" id="requisito1" class="casilla-verificacion" checked disabled>
+                        <label for="requisito1" class="etiqueta-requisito completado">Crear Cuenta</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="requisito2" class="casilla-verificacion" checked disabled>
+                        <label for="requisito2" class="etiqueta-requisito completado">Actualizar Progreso del
+                            Roadmap</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="requisito3" class="casilla-verificacion" checked disabled>
+                        <label for="requisito3" class="etiqueta-requisito completado">Configurar Perfil Público</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="requisito4" class="casilla-verificacion">
+                        <label for="requisito4" class="etiqueta-requisito">Completar tu primer proyecto</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="requisito5" class="casilla-verificacion">
+                        <label for="requisito5" class="etiqueta-requisito">Invitar a tus amigos</label>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>
